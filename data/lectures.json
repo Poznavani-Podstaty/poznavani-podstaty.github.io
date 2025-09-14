@@ -1,4 +1,15 @@
 [
+ {
+    "title": "Pravda",
+    "url": "prednasky/Pravda.html",
+    "excerpt": "Základní rámec PPP.",
+    "length": "15 min",
+    "tags": [
+      "přednášky",
+      "Mocné pojmy"
+    ],
+    "date": "2025-01-01"
+  },
   {
     "title": "Úvod do přirozenosti",
     "url": "prednasky/uvod-do-prirozenosti.html",
