@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Domů",
+    "url": "index.html",
+    "excerpt": "Domovská stránka PPP s novinkami a doporučeními",
+    "tags": [
+      "domu",
+      "uvod"
+    ]
+  },
+  {
+    "title": "Přednášky — přehled",
+    "url": "prednasky.html",
+    "excerpt": "Seznam přednášek PPP",
+    "tags": [
+      "prednasky",
+      "obsah"
+    ]
+  },
+  {
+    "title": "Citáty — přehled",
+    "url": "citaty.html",
+    "excerpt": "Krátké myšlenky a citáty",
+    "tags": [
+      "citaty"
+    ]
+  },
+  {
+    "title": "Diskuze",
+    "url": "diskuze.html",
+    "excerpt": "Prostor pro komentáře a témata",
+    "tags": [
+      "diskuze",
+      "komentare"
+    ]
+  },
+  {
+    "title": "Manifest",
+    "url": "manifest.html",
+    "excerpt": "Základní principy a cíle PPP",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "title": "O projektu",
+    "url": "o-projektu.html",
+    "excerpt": "Co je Poznávání podstaty",
+    "tags": [
+      "o projektU",
+      "ppp"
+    ]
+  }
+]
