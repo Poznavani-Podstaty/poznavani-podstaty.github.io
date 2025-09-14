@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Poznávání podstaty — Domů</title>
+<meta name="description" content="PPP: články, přednášky a smysluplné diskuze bez mlhy." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ccircle cx='32' cy='32' r='30' fill='white' stroke='black'/%3E%3C/svg%3E" />
+<style>
+  :root { --bg:#fff; --text:#0a0a0a; --muted:#6b7280; --line:#e6e6e6; --shadow:0 8px 30px rgba(0,0,0,.06);
+          --radius:14px; --radius-sm:10px; --maxw:1240px; --padx:clamp(12px,3vw,28px); --h1:clamp(28px,3.2vw,40px); --h2:clamp(22px,2.4vw,28px); --h3:clamp(18px,2vw,22px);
+          --accent:#1976d2; --accent-soft:#e9f2fc; }
+  .theme-blue{--accent:#1976d2;--accent-soft:#e9f2fc;}
+  .theme-red{--accent:#d32f2f;--accent-soft:#fdeaea;}
+  .theme-orange{--accent:#f9a825;--accent-soft:#fff6db;}
+  *{box-sizing:border-box} html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  img{max-width:100%;height:auto;display:block}
+  .topbar{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:var(--maxw);margin:0 auto;padding:10px var(--padx);display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.2px}
+  .brand .mark{width:42px;height:42px;border-radius:999px;border:1px solid #cfd2d7;background:#fff}
+  .brand .name{font-size:18px}
+  .nav{margin-left:auto;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+  .nav a{text-decoration:none;color:var(--text);font-weight:600;padding:10px 12px;border-radius:10px}
+  .nav a:hover{background:#f7f7f7}
+  .nav a.active{color:var(--accent)}
+  .theme-switch{border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700;color:var(--accent);background:var(--accent-soft);cursor:pointer}
+  .menu-btn{display:none;border:1px solid var(--line);border-radius:10px;padding:8px 12px;background:#fff}
+  @media (max-width:880px){.nav-primary{display:none}.menu-btn{display:block;margin-left:auto}}
+  .drawer{display:none;border-top:1px solid var(--line);background:#fff}
+  .drawer.open{display:block}
+  .drawer-inner{max-width:var(--maxw);margin:0 auto;padding:8px var(--padx)}
+  .drawer a{display:block;padding:12px 0;border-top:1px solid var(--line);color:var(--text);text-decoration:none}
+  .drawer a:first-child{border-top:0}
+  .drawer .row{display:flex;align-items:center;gap:10px;justify-content:space-between}
+  .subnav{position:sticky;top:58px;background:#fff;border-bottom:1px solid var(--line)}
+  .subnav.is-stuck{box-shadow:var(--shadow)}
+  .subnav-inner{max-width:var(--maxw);margin:0 auto;padding:8px var(--padx);display:flex;gap:10px;overflow:auto}
+  .chip{border:1px solid var(--line);border-radius:999px;padding:6px 10px;white-space:nowrap;font-weight:600;color:#333}
+  .chip.active{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:20px var(--padx) 56px}
+  .grid{display:grid;grid-template-columns:3fr 1.5fr;gap:22px}
+  @media (max-width:980px){.grid{grid-template-columns:1fr}}
+  .hero{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--accent-soft)}
+  .hero-inner{display:grid;grid-template-columns:1.4fr 1fr}
+  @media (max-width:980px){.hero-inner{grid-template-columns:1fr}}
+  .hero-content{padding:22px;display:flex;flex-direction:column;gap:10px}
+  .hero h1{font-size:var(--h1);line-height:1.2;margin:4px 0}
+  .eyebrow{font-weight:800;color:var(--accent)}
+  .meta{color:var(--muted);font-weight:600}
+  .hero-visual{min-height:280px;background:linear-gradient(120deg, rgba(0,0,0,.05), rgba(0,0,0,0)), url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22720%22 height=%22400%22><rect width=%22720%22 height=%22400%22 fill=%22%23f5f7fa%22/><text x=%2250%22 y=%22220%22 font-size=%2240%22 fill=%22%2399a%22>Ilustra%C4%8Dn%C3%AD obr%C3%A1zek</text></svg>') center/cover no-repeat}
+  .btn{align-self:flex-start;display:inline-block;text-decoration:none;font-weight:800;color:var(--accent);border:1px solid var(--accent);padding:10px 14px;border-radius:12px}
+  .btn:hover{box-shadow:var(--shadow);background:#fff}
+  .section{margin-top:24px}
+  .sec-title{font-size:var(--h2);margin:0 0 10px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media (max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:640px){.cards{grid-template-columns:1fr}}
+  .card{border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;transition:transform .12s ease, box-shadow .12s ease}
+  .card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .card .media{aspect-ratio:16/9;background:#f3f4f6}
+  .card .body{padding:12px 14px 14px}
+  .card h3{font-size:var(--h3);margin:0 0 6px}
+  .side{display:grid;gap:16px}
+  .box{border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px}
+  .box h4{margin:0 0 8px;font-size:18px}
+  .rank{counter-reset:r;list-style:none;padding:0;margin:0}
+  .rank li{counter-increment:r;padding:8px 0;border-top:1px solid var(--line)}
+  .rank li:first-child{border-top:0}
+  .rank li::before{content:counter(r) ".";font-weight:900;color:var(--accent);margin-right:8px}
+  .comments{margin-top:28px}
+  .comments .placeholder{border:1px dashed var(--line);border-radius:12px;padding:16px;color:var(--muted)}
+  footer{border-top:1px solid var(--line);background:#fff}
+  .foot-inner{max-width:var(--maxw);margin:0 auto;padding:16px var(--padx);display:flex;gap:10px;flex-wrap:wrap;color:#333}
+  .foot-inner a{text-decoration:none;color:var(--text)}
+  .foot-inner a:hover{color:var(--accent)}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  @media (prefers-reduced-motion: reduce){.card,.btn{transition:none}}
+</style>
+</head>
+<body class="theme-blue">
+  <div class="topbar" role="banner">
+    <div class="topbar-inner">
+      <a class="brand" href="#" aria-label="Domů">
+        <span class="mark" aria-hidden="true"></span>
+        <span class="name">Poznávání podstaty</span>
+      </a>
+      <nav class="nav nav-primary" aria-label="Hlavní navigace">
+        <a class="active" href="#">Domů</a>
+        <a href="#">Citáty</a>
+        <a href="#">Přednášky</a>
+        <a href="#">Diskuze</a>
+        <a href="#">Manifest</a>
+        <a href="#">O projektu</a>
+        <button id="themeBtn" class="theme-switch" aria-label="Přepnout akcent">Modrá</button>
+      </nav>
+      <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="drawer">Menu</button>
+    </div>
+  </div>
+
+  <div id="subnav" class="subnav" role="navigation" aria-label="Témata">
+    <div class="subnav-inner">
+      <span class="chip active">Vše</span>
+      <span class="chip">Člověk</span>
+      <span class="chip">Společnost</span>
+      <span class="chip">Komunikace</span>
+      <span class="chip">Morálka</span>
+      <span class="chip">Konkurenceschopnost</span>
+      <span class="chip">Tabu</span>
+    </div>
+  </div>
+
+  <div id="drawer" class="drawer" hidden>
+    <div class="drawer-inner">
+      <div class="row"><strong>Navigace</strong> <button id="themeBtn2" class="theme-switch" aria-label="Přepnout akcent (mobil)">Modrá</button></div>
+      <a href="#">Domů</a><a href="#">Citáty</a><a href="#">Přednášky</a><a href="#">Diskuze</a><a href="#">Manifest</a><a href="#">O projektu</a>
+    </div>
+  </div>
+
+  <main class="wrap" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="eyebrow">Shrnutí týdne</div>
+          <h1 id="hero-title">3 klíčové závěry posledních diskuzí</h1>
+          <div class="meta">5 min čtení • aktualizováno dnes</div>
+          <a class="btn" href="#">Přečíst</a>
+        </div>
+        <div class="hero-visual" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <div>
+        <section class="section" aria-label="Nové a doporučené">
+          <h2 class="sec-title" style="border-left:4px solid var(--accent); padding-left:10px;">Nové &amp; doporučené</h2>
+          <div class="cards">
+            <article class="card"><div class="media"></div><div class="body"><h3>Komunikace bez mlhy</h3><div class="meta">8 min • Pojmy, které netahají za nos.</div></div></article>
+            <article class="card"><div class="media"></div><div class="body"><h3>Konkurenceschopnost bez iluzí</h3><div class="meta">10 min • Když čísla nesedí, přání nepomůže.</div></div></article>
+            <article class="card"><div class="media"></div><div class="body"><h3>Morálka v praxi</h3><div class="meta">7 min • Kooperace se vyplácí.</div></div></article>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="sec-lectures">
+          <h2 id="sec-lectures" class="sec-title" style="border-left:4px solid var(--accent); padding-left:10px;">Přednášky</h2>
+          <div class="cards">
+            <article class="card"><div class="media"></div><div class="body"><h3>Úvod do přirozenosti</h3><div class="meta">15 min • Základní rámec PPP.</div></div></article>
+            <article class="card"><div class="media"></div><div class="body"><h3>Člověk</h3><div class="meta">10 min • Struktura osobnosti a motivace.</div></div></article>
+            <article class="card"><div class="media"></div><div class="body"><h3>Tabu: jak s ním naložit</h3><div class="meta">9 min • Omezený přístup • bezpečná pravidla.</div></div></article>
+          </div>
+        </section>
+
+        <section class="comments" aria-labelledby="komentare">
+          <h2 id="komentare" class="sec-title" style="border-left:4px solid var(--accent); padding-left:10px;">Komentáře</h2>
+          <div class="placeholder">
+            Zde bude vložen systém diskuzí (např. Discourse/Remark42).<br/><small>Implementační poznámka: vložte embed skript a identifikátor stránky (např. /home). Styl převezme barvy PPP.</small>
+          </div>
+          <div id="comments"></div>
+        </section>
+      </div>
+
+      <aside class="side" aria-label="Postranní informace">
+        <div class="box"><h4>Citát dne</h4><p style="margin:0 0 8px;"><b style="color:var(--accent)">„Proč?“</b> je nejlevnější motor pokroku.</p><a class="btn" href="#" style="padding:8px 12px;">Více citátů</a></div>
+        <div class="box"><h4>Nejčtenější</h4><ol class="rank"><li>Je matematika fér rozhodčí?</li><li>Etika a manipulace</li><li>Role a úkoly PPP</li></ol></div>
+        <div class="box"><h4>Štítky</h4><span class="chip" style="margin-right:6px;">Společnost</span><span class="chip" style="margin-right:6px;">Komunikace</span><span class="chip" style="margin-right:6px;">Morálka</span><span class="chip" style="margin-right:6px;">Člověk</span><span class="chip active">Diskuze</span></div>
+        <div class="box"><h4>Newsletter</h4><p class="meta">Dostávej shrnutí týdne do e-mailu.</p><a class="btn" href="#">Přihlásit</a></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="foot-inner">
+      <span>© Poznávání podstaty</span>
+      <a href="#">Pravidla diskuze</a>
+      <a href="#">Ochrana soukromí</a>
+      <a href="#">Kontakt</a>
+    </div>
+  </footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const drawer = document.getElementById('drawer');
+  menuBtn?.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    drawer.hidden = !open;
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  const btns = [document.getElementById('themeBtn'), document.getElementById('themeBtn2')].filter(Boolean);
+  const themes = [ ['theme-blue','Modrá'], ['theme-red','Červená'], ['theme-orange','Oranžová'] ];
+  function currentThemeIndex(){ const b=document.body; for(let i=0;i<themes.length;i++) if(b.classList.contains(themes[i][0])) return i; return 0; }
+  function applyTheme(i){ document.body.classList.remove(...themes.map(t=>t[0])); document.body.classList.add(themes[i][0]); btns.forEach(b=>b.textContent = themes[i][1]); }
+  btns.forEach(b => b.addEventListener('click', () => { const i=(currentThemeIndex()+1)%themes.length; applyTheme(i); }));
+  const subnav = document.getElementById('subnav');
+  const obs = new IntersectionObserver(entries => { entries.forEach(e => subnav.classList.toggle('is-stuck', !e.isIntersecting)); }, {threshold:[1]});
+  const sentinel = document.createElement('div'); sentinel.style.position='absolute'; sentinel.style.top='0'; sentinel.style.height='1px'; sentinel.style.width='1px';
+  document.body.prepend(sentinel); obs.observe(sentinel);
+</script>
+</body>
+</html>
