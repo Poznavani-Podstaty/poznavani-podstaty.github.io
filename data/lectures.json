@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Úvod do přirozenosti",
+    "url": "prednasky/uvod-do-prirozenosti.html",
+    "excerpt": "Základní rámec PPP.",
+    "length": "15 min",
+    "tags": [
+      "přednášky",
+      "člověk"
+    ],
+    "date": "2025-01-01"
+  },
+  {
+    "title": "Člověk",
+    "url": "prednasky/clovek.html",
+    "excerpt": "Struktura osobnosti a motivace.",
+    "length": "10 min",
+    "tags": [
+      "přednášky",
+      "člověk"
+    ],
+    "date": "2025-01-02"
+  }
+]

@@ -26,16 +26,30 @@ if (subnav) {
   document.body.prepend(sentinel); obs.observe(sentinel);
 }
 
-// Simple global search (loads data/search.json relative to current page)
+// -------- Simple search (merges search.json + lectures.json + quotes.json if present) --------
+async function fetchJSON(rel) {
+  try { const r = await fetch(rel); if (!r.ok) throw new Error(); return await r.json(); }
+  catch { return []; }
+}
 async function pppSearchInit() {
   const input = document.getElementById('q');
   const out = document.getElementById('search-results');
   if (!input || !out) return;
-  let db = [];
-  try {
-    const res = await fetch('data/search.json');
-    db = await res.json();
-  } catch (e) { /* ignore */ }
+  const [base, lectures, quotes] = await Promise.all([
+    fetchJSON('data/search.json'),
+    fetchJSON('data/lectures.json'),
+    fetchJSON('data/quotes.json')
+  ]);
+  const q2items = quotes.map(q => ({
+    title: (q.text || '').slice(0, 60) + (q.text && q.text.length>60 ? '…' : ''),
+    url: 'citaty.html',
+    excerpt: q.text,
+    tags: q.tags || []
+  }));
+  const l2items = lectures.map(l => ({
+    title: l.title, url: l.url || 'prednasky.html', excerpt: l.excerpt, tags: l.tags || []
+  }));
+  const db = [...base, ...l2items, ...q2items];
 
   function render(q) {
     out.innerHTML = '';
@@ -44,7 +58,7 @@ async function pppSearchInit() {
     const found = db.filter(it =>
       (it.title || '').toLowerCase().includes(qq) ||
       (it.excerpt || '').toLowerCase().includes(qq) ||
-      (it.tags || []).some(t => t.toLowerCase().includes(qq))
+      (it.tags || []).some(t => (t||'').toLowerCase().includes(qq))
     ).slice(0, 20);
     if (!found.length) { out.innerHTML = '<div class="search-item">Nic nenalezeno.</div>'; return; }
     for (const it of found) {
@@ -57,3 +71,29 @@ async function pppSearchInit() {
   input.addEventListener('input', e => render(e.target.value));
 }
 pppSearchInit();
+
+// -------- Renderers for lists (Přednášky, Citáty) --------
+async function renderLectures() {
+  const wrap = document.getElementById('lectures-list');
+  if (!wrap) return;
+  const data = await fetchJSON('data/lectures.json');
+  if (!data.length) { wrap.innerHTML = '<p class="meta">Zatím žádné přednášky…</p>'; return; }
+  wrap.innerHTML = data.map(l => `
+    <article class="card">
+      <div class="media"></div>
+      <div class="body">
+        <h3><a href="${l.url}">${l.title}</a></h3>
+        <div class="meta">${l.length || ''} • ${l.excerpt || ''}</div>
+      </div>
+    </article>
+  `).join('');
+}
+async function renderQuotes() {
+  const list = document.getElementById('quotes-list');
+  if (!list) return;
+  const data = await fetchJSON('data/quotes.json');
+  if (!data.length) { list.innerHTML = '<p class="meta">Zatím žádné citáty…</p>'; return; }
+  list.innerHTML = data.map(q => `<li>“${q.text}” — <span class="meta">${q.author || ''}</span></li>`).join('');
+}
+renderLectures();
+renderQuotes();
