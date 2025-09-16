@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <title>Mocné pojmy – Pravda — Přednáška č. 17 (Mag)</title>
+  <title>Mocné pojmy – Pravda — Přednáška č. 17</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Mocné pojmy – Pravda — Přednáška č. 17 (PPP)">
@@ -14,15 +14,15 @@
   <meta property="og:image" content="https://<TVOJE-DOMENA>/assets/og/ppp-default.png">
   <style>
     .eyebrow{font-weight:800;color:var(--accent);}
-    .mag-hero{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;background:var(--accent-soft);border:1px solid var(--line);border-radius:14px;padding:18px}
-    @media (max-width:980px){.mag-hero{grid-template-columns:1fr}}
-    .mag-visual{border:1px solid var(--line);border-radius:12px;overflow:hidden;min-height:220px;background:linear-gradient(120deg, rgba(0,0,0,.05), rgba(0,0,0,0)), #f5f7fa}
-    .pull{border-left:4px solid var(--accent);padding:8px 12px;margin:16px 0;background:#fff;border-radius:12px;font-size:20px;font-weight:700}
-    .narrow{max-width:760px;margin:0 auto}
+    .meta-row{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-weight:600}
+    .tags{display:flex;gap:6px;flex-wrap:wrap}
+    .tag{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:#333}
+    .share{border:1px dashed var(--line);border-radius:12px;padding:12px;margin-top:12px}
+    .media-16x9{aspect-ratio:16/9;background:#f3f4f6;border:1px solid var(--line);border-radius:12px;overflow:hidden}
     .anchor{opacity:0;margin-left:6px;text-decoration:none}
     .prose h2:hover .anchor,.prose h3:hover .anchor{opacity:1}
     .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:100}
-    @media print{ header,.subnav,footer,.progress{display:none !important} body{background:#fff;color:#000} .prose{font-size:12pt} }
+    @media print{ header,.subnav,.toc,.share,footer,.progress{display:none !important} body{background:#fff;color:#000} .prose{font-size:12pt} }
   </style>
   <script type="application/ld+json">
   {
@@ -64,62 +64,44 @@
 </div>
 
 <main class="wrap" role="main">
-  <section class="mag-hero" aria-labelledby="title">
-    <div>
-      <div class="eyebrow">Mocné pojmy</div>
-      <h1 id="title">Pravda — Přednáška č. 17</h1>
-      <div class="meta-row"><div><strong>Autor:</strong> PPP</div><div><strong>Délka:</strong> 15–25 min</div><div><strong>Datum:</strong> 23. března 2022</div></div>
-      <div class="tags" style="margin-top:6px;"><span class="tag">Mocné pojmy</span><span class="tag">Pravda</span></div>
+  <nav class="meta" aria-label="Drobečková navigace"><a href="../prednasky.html">Přednášky</a> › <span>Mocné pojmy – Pravda — Přednáška č. 17</span></nav>
+
+  <section class="article-hero" aria-labelledby="title">
+    <div class="eyebrow">Mocné pojmy</div>
+    <h1 id="title">Pravda — Přednáška č. 17</h1>
+    <div class="meta-row">
+      <div><strong>Autor:</strong> PPP</div>
+      <div><strong>Délka:</strong> 15–25 min</div>
+      <div><strong>Datum:</strong> 23. března 2022</div>
     </div>
-    <div class="mag-visual media-16x9" aria-label="Ilustrační vizuál / video">
-      <!-- <iframe ... YouTube privacy embed ...></iframe> -->
+    <div class="tags" style="margin-top:6px;">
+      <span class="tag">Mocné pojmy</span><span class="tag">Pravda</span><span class="tag">Společnost</span>
     </div>
   </section>
 
-  <article id="content" class="prose narrow" aria-label="Obsah přednášky">
-    <p class="meta"><strong>Anotace:</strong> [Stručné shrnutí.]</p>
-    <div class="pull">„V ideálu je pravda dokonalý model reality. V praxi cíl, ke kterému se přibližujeme.“</div>
+  <div class="grid-article">
+    <article id="content" class="prose" aria-label="Obsah přednášky">
 
-    <!-- START: Obsah přednášky č.17 (vložit přesný text) -->
-    <h2 id="uvod">1. Úvod<span class="anchor"><a href="#uvod">#</a></span></h2>
-    <p>[Úvod…]</p>
+      <p>Zdravím vás lidičky,</p>
+      <p>já jsem Diskutér a vítám vás u přednášky č.17 projektu Poznávání podstaty. Dnes se zaměříme na téma Pravda. Toto téma spadá do tematického okruhu Mocné pojmy.</p>
+      <p>Nejdříve si zopakujme lehce ambiciózní cíl projektu, kterým je: Drobná úprava světa, aby se nám tu žilo lépe. V rámci této přednášky prozkoumáme, jak moc reálně vnímáme svět kolem nás.</p>
+      <p>Na úvod upozorňuji, že je tento díl zpočátku zaměřen na slovíčkaření a budeme se tedy nejdříve věnovat rozboru zdánlivě drobných rozdílů. Tyto informace jsou ovšem naprosto zásadní, protože tvoří základy pro ty myšlenky, které zazní v závěru přednášky. Proto, prosím, dejte úvodu šanci. Při opakovaném shlédnutí by vám již měly dávat smysl i ty úvodní myšlenky. Téma pravdy je hold obzvláště obsáhlé a je obtížné jej ve stručnosti srozumitelně popsat. Když to shrnu, tak říct pravdičku o pravdě hold není žádná prča 😊.</p>
+      <p>Tak a teď se už pusťme do přednášky!</p>
 
-    <h2 id="definice">2. Definice a rámec<span class="anchor"><a href="#definice">#</a></span></h2>
-    <p>[Definice…]</p>
+      <h2 id="jak-si-vlastne-predstavujeme-pravdu">Jak si vlastně představujeme pravdu?<span class="anchor"><a href="#jak-si-vlastne-predstavujeme-pravdu">#</a></span></h2>
+      <p>Předpokládám, že si asi většina z nás představuje pravdu, jako jeden z uvedených příkladů, nebo jako jejich kombinaci:</p>
+      <ol>
+        <li>upřímnou odpověď na položenou otázku.</li>
+        <li>nějaký popis předmětu, osoby, činnosti, jevu nebo třeba události, kdy uvádíme pouze ty informace, kterým sami věříme.</li>
+        <li>názor, který prezentuje nějaká autorita, nebo třeba většina.</li>
+      </ol>
+      <p>No a pokud jsme se již o pravdu zajímali, tak asi dodáme, že je pravdou pouze to, když nic podstatného nezamlčíme. Dá se říct, že je tato představa o pravdě v reálném světě rozšířená. Pokud se tedy budeme snažit dodržovat uvedené popisy pravdy, tak si ostudu neuřízneme a budeme bráni za čestné členy společnosti. Přesto nejsou uvedené popisy pravdy zcela přesné. Proto si to uvedeme na pravou míru.</p>
+      <p>Má představa o pravdě se nejvíce shoduje s názorem, že je pravda dokonalým modelem reality. Tato definice obsahuje dvě zásadní myšlenky. První myšlenka říká, co pravdou je a ta druhá myšlenka odkazuje na to, k čemu je vlastně pravda dobrá. Představme si pravdu jako model auta nebo jako stavební plán budovy. První myšlenku, tedy co je pravdou, zde představuje naprosto dokonalý model auta, nebo budovy. A druhou myšlenkou je to, že jsme schopní díky dokonalému modelu pochopit auto, nebo budovu, a to včetně jejich způsobu fungování. To pochopení je tak dokonalé, že dokážeme tento model začlenit do svého světonázoru a současně na základě jeho znalosti dokážeme udělat naprosto přesnou kopii daného předmětu. Pokud bychom tedy ostatním sdělovali naprostou pravdu, tak by nás nikdo nemohl pochopit mylně a nikdy by nemohlo dojít k nedorozumění. Pokud tedy popisujeme nějaké místo, nebo situaci, tak by měl náš partner cítit, že tam skutečně je a zážitek z toho by měl být naprosto autentický. Jinými slovy by v případě sdělení celé pravdy byly zkušenosti a zážitky přenositelné.</p>
+      <p>Já tedy pravdu vnímám jako zevrubné poznání reality, což nám umožňuje dělat správná rozhodnutí. Pokud je naše vnímání pravdy chybné, nebo neúplné, tak se ani přes veškerou snahu chybám nevyhneme. A to je podle mě důvod, proč tolik toužíme poznávat pravdu. Podle mě tedy nemůžeme za pravdu považovat slovní výroky, protože jimi nejsme schopni postihnout veškeré souvislosti. Tento názor si rozebereme dále v přednášce.</p>
 
-    <h3 id="priklad">2.1 Příklad a proti-příklad<span class="anchor"><a href="#priklad">#</a></span></h3>
-    <p>[Příklad…]</p>
-
-    <h2 id="dusledky">3. Důsledky pro praxi<span class="anchor"><a href="#dusledky">#</a></span></h2>
-    <ul><li>[Doporučení]</li></ul>
-
-    <h2 id="zaver">4. Závěr<span class="anchor"><a href="#zaver">#</a></span></h2>
-    <p>[Závěr…]</p>
-    <!-- END: Obsah přednášky č.17 -->
-  </article>
-
-  <section class="comments" aria-labelledby="komentare">
-    <h2 id="komentare" class="sec-title" style="border-left:4px solid var(--accent); padding-left:10px;">Komentáře</h2>
-    <div class="box"><p><b>Tip:</b> Vlož kód z <a href="https://giscus.app" target="_blank" rel="noopener">giscus.app</a>.</p></div>
-  </section>
-</main>
-
-<footer role="contentinfo">
-  <div class="foot-inner">
-    <span>© Poznávání podstaty</span>
-    <a href="../pravidla-diskuze.html">Pravidla diskuze</a>
-    <a href="../ochrana-soukromi.html">Ochrana soukromí</a>
-    <a href="../kontakt.html">Kontakt</a>
-  </div>
-</footer>
-
-<script src="../assets/js/theme.js"></script>
-<script>
-(function(){ // progress
-  const p=document.getElementById('progress'); const h=document.body;
-  function u(){ const s=window.scrollY; const d=h.scrollHeight-window.innerHeight; p.style.width=(d?(s/d)*100:0)+'%'; }
-  window.addEventListener('scroll',u,{passive:true}); u();
-})();
-</script>
-</body>
-</html>
+      <h2 id="jak-si-tedy-mame-predstavit-uplnou-pravdu">Jak si tedy vlastně máme představit úplnou pravdu?<span class="anchor"><a href="#jak-si-tedy-mame-predstavit-uplnou-pravdu">#</a></span></h2>
+      <p>Vycházejme z definice pravdy, kterou jsem již v přednášce uvedl. Tato definici říká, že je pravda dokonalý model reality. Představme si to na příkladu, kdy si chceme postavit dům v přírodě, a právě vybíráme vhodný stavební pozemek. Na jeden působivý jsme narazili a chceme jej přesně popsat přátelům, aby nám pomohly s rozhodnutím, zda si ho máme koupit.</p>
+      <p>V tomto případě bychom měli vytvořit naprosto přesný model dané lokality. Ti, kteří by se s tímto popisem seznámili, by měli mít pocit, že tam skutečně jsou a měli by být i schopný udělat naprostou přesnou kopii popisovaného území. Jak by tedy měl takovýto model vypadat, pokud budeme brát doslova ten požadavek na dokonalost modelu reality? Začněme tím, že by v tomto modelu jistě měly být obsaženy veškeré předměty, rostliny a vše živé. Prostě bychom do modelu měli zanést naprosto vše, co jsou schopné oči vnímat a vše by mělo být na správném místě a ve správné velikosti. Představme si to, jako když modelář sestavuje naprosto přesný model nějaké velké lodi. Dále bychom do modelu měli přidat to, co není vidět, ale co jsme schopni postřehnout ostatními smysly. Tím do modelu přidáváme vůně, pachy, hluky, proudění větru nebo třeba pocit mrazu, či hřejivé sluneční paprsky. V modelu již tedy máme obsaženo to, co jsme schopni vnímat našimi smysly. No a k tomu tedy zákonitě musíme doplnit to, co v daném prostředí je, ale co se našim smyslům skrývá. Tím přidáme všelijaké námi nevnímatelné vlnění a pak také třeba i bakterie a viry. A k tomu pochopitelně musíme dále přidat ještě ty částice a všelijaké jevy o kterých prozatím lidstvo zatím nemá ani zdání. Nyní snad máme v modelu vše, co se na daném prostředí fyzicky nachází. … Tím máme dobrý základ, takže pokračujeme dál! Dále přidejme do modelu souvislosti. Tyto souvislosti jsou prostorové, smluvní a plánované. Do prostorových souvislostí patří to, co se v daném prostředí přímo nenachází, ale co může mít na tento prostor vliv. Můžeme si to pospat slovy pod, nad a okolo. Pod odkazuje na to, co je pod zemí, nad odkazuje na to, co je ve vzduchu nad námi a okolo odkazuje na vliv okolí. Pod může představovat nevybuchlá puma z války kousek pod zemí. Nad může představovat radioaktivní spad z vybuchlé jaderné elektrárny a okolo může představovat nějaká chemická továrna, která občas vypouští nebezpečné chemikálie do řeky, která protéká tímto údolím.</p>
+      <p>souvislost plánovanou zde může představovat například záměr, že toto údolí bude zatopeno, aby zde vznikla přehrada. A souvislost smluvní zase může by zastoupena tím, že vlastník nemá právo pozemek prodávat, protože je v exekuci. To ovšem není vše. Podle mě by měla pravda obsahovat i historické souvislosti. … Nebo by vás snad při výběru pozemku nezajímalo, zda na něm v minulosti nedošlo k nějaké masové popravě během války, zda zde nezavraždili nějakého vašeho předka, nebo zda tu nebyl tábor pro týrání zajatců? Mě by to zajímalo, a proto by měl podle mě model pravdy obsahovat i tuto informaci.</p>
+      <p>A aby tento model představoval úplnou pravdu, tak bych si představoval jeho propracování do podrobnosti nejmenších mě známých fyzikálních částic, tedy kvarků. Kromě toho by měl model dávat i vysvětlení, jak na sebe jednotlivé částice působí, což by vlastně znamenalo, že bychom byli schopni předpovídat budoucnost. Bylo by to obdobou toho, o co se stále úspěšněji snaží rosničky při předpovědi počasí v televizi.</p>
+      <p>Určitě jsem zapomněl nějakou část pravdy zmínit 😊. I tak si ale myslím, že jsem jasně nastínil neskutečnou složitost úplné pravdy a to, proč tvrdím, že ji
