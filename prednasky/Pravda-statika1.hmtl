@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <title>Mocné pojmy – Pravda — Přednáška č. 17 (Mag)</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mocné pojmy – Pravda — Přednáška č. 17 (PPP)">
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="canonical" href="https://<TVOJE-DOMENA>/prednasky/prednaska-17.html">
+  <meta property="og:title" content="Mocné pojmy – Pravda — Přednáška č. 17">
+  <meta property="og:description" content="Přednáška v rámci cyklu Mocné pojmy, téma Pravda.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://<TVOJE-DOMENA>/prednasky/prednaska-17.html">
+  <meta property="og:image" content="https://<TVOJE-DOMENA>/assets/og/ppp-default.png">
+  <style>
+    .eyebrow{font-weight:800;color:var(--accent);}
+    .mag-hero{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;background:var(--accent-soft);border:1px solid var(--line);border-radius:14px;padding:18px}
+    @media (max-width:980px){.mag-hero{grid-template-columns:1fr}}
+    .mag-visual{border:1px solid var(--line);border-radius:12px;overflow:hidden;min-height:220px;background:linear-gradient(120deg, rgba(0,0,0,.05), rgba(0,0,0,0)), #f5f7fa}
+    .pull{border-left:4px solid var(--accent);padding:8px 12px;margin:16px 0;background:#fff;border-radius:12px;font-size:20px;font-weight:700}
+    .narrow{max-width:760px;margin:0 auto}
+    .anchor{opacity:0;margin-left:6px;text-decoration:none}
+    .prose h2:hover .anchor,.prose h3:hover .anchor{opacity:1}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:100}
+    @media print{ header,.subnav,footer,.progress{display:none !important} body{background:#fff;color:#000} .prose{font-size:12pt} }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Mocné pojmy – Pravda — Přednáška č. 17",
+    "datePublished":"2022-03-23",
+    "author":{"@type":"Person","name":"PPP"},
+    "publisher":{"@type":"Organization","name":"Poznávání podstaty"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://<TVOJE-DOMENA>/prednasky/prednaska-17.html"}
+  }
+  </script>
+</head>
+<body class="theme-blue">
+<a class="skip-link" href="#content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Přeskočit na obsah</a>
+<div class="progress" id="progress"></div>
+
+<header class="topbar" role="banner">
+  <div class="topbar-inner">
+    <a class="brand" href="../index.html"><span class="mark" aria-hidden="true"></span><span class="name">Poznávání podstaty</span></a>
+    <nav class="nav nav-primary" aria-label="Hlavní navigace">
+      <a href="../index.html">Domů</a>
+      <a href="../citaty.html">Citáty</a>
+      <a href="../prednasky.html" class="active">Přednášky</a>
+      <a href="../diskuze.html">Diskuze</a>
+      <a href="../manifest.html">Manifest</a>
+      <a href="../o-projektu.html">O projektu</a>
+      <button id="themeBtn" class="theme-switch" aria-label="Přepnout akcent">Modrá</button>
+    </nav>
+  </div>
+</header>
+
+<div id="subnav" class="subnav" role="navigation" aria-label="Témata">
+  <div class="subnav-inner">
+    <span class="chip active">Přednášky</span>
+    <span class="chip">Mocné pojmy</span>
+    <span class="chip">Pravda</span>
+  </div>
+</div>
+
+<main class="wrap" role="main">
+  <section class="mag-hero" aria-labelledby="title">
+    <div>
+      <div class="eyebrow">Mocné pojmy</div>
+      <h1 id="title">Pravda — Přednáška č. 17</h1>
+      <div class="meta-row"><div><strong>Autor:</strong> PPP</div><div><strong>Délka:</strong> 15–25 min</div><div><strong>Datum:</strong> 23. března 2022</div></div>
+      <div class="tags" style="margin-top:6px;"><span class="tag">Mocné pojmy</span><span class="tag">Pravda</span></div>
+    </div>
+    <div class="mag-visual media-16x9" aria-label="Ilustrační vizuál / video">
+      <!-- <iframe ... YouTube privacy embed ...></iframe> -->
+    </div>
+  </section>
+
+  <article id="content" class="prose narrow" aria-label="Obsah přednášky">
+    <p class="meta"><strong>Anotace:</strong> [Stručné shrnutí.]</p>
+    <div class="pull">„V ideálu je pravda dokonalý model reality. V praxi cíl, ke kterému se přibližujeme.“</div>
+
+    <!-- START: Obsah přednášky č.17 (vložit přesný text) -->
+    <h2 id="uvod">1. Úvod<span class="anchor"><a href="#uvod">#</a></span></h2>
+    <p>[Úvod…]</p>
+
+    <h2 id="definice">2. Definice a rámec<span class="anchor"><a href="#definice">#</a></span></h2>
+    <p>[Definice…]</p>
+
+    <h3 id="priklad">2.1 Příklad a proti-příklad<span class="anchor"><a href="#priklad">#</a></span></h3>
+    <p>[Příklad…]</p>
+
+    <h2 id="dusledky">3. Důsledky pro praxi<span class="anchor"><a href="#dusledky">#</a></span></h2>
+    <ul><li>[Doporučení]</li></ul>
+
+    <h2 id="zaver">4. Závěr<span class="anchor"><a href="#zaver">#</a></span></h2>
+    <p>[Závěr…]</p>
+    <!-- END: Obsah přednášky č.17 -->
+  </article>
+
+  <section class="comments" aria-labelledby="komentare">
+    <h2 id="komentare" class="sec-title" style="border-left:4px solid var(--accent); padding-left:10px;">Komentáře</h2>
+    <div class="box"><p><b>Tip:</b> Vlož kód z <a href="https://giscus.app" target="_blank" rel="noopener">giscus.app</a>.</p></div>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <div class="foot-inner">
+    <span>© Poznávání podstaty</span>
+    <a href="../pravidla-diskuze.html">Pravidla diskuze</a>
+    <a href="../ochrana-soukromi.html">Ochrana soukromí</a>
+    <a href="../kontakt.html">Kontakt</a>
+  </div>
+</footer>
+
+<script src="../assets/js/theme.js"></script>
+<script>
+(function(){ // progress
+  const p=document.getElementById('progress'); const h=document.body;
+  function u(){ const s=window.scrollY; const d=h.scrollHeight-window.innerHeight; p.style.width=(d?(s/d)*100:0)+'%'; }
+  window.addEventListener('scroll',u,{passive:true}); u();
+})();
+</script>
+</body>
+</html>
